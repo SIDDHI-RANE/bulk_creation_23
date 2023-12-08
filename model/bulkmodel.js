@@ -8,7 +8,7 @@ const User = Connection.define(
     {
     id:{
         type:DataTypes.INTEGER,
-        allowNull:false,
+        allowNull:true,
         primaryKey:true,
         autoIncrement:true
     },
@@ -29,7 +29,7 @@ const User = Connection.define(
     );
 
  User
-  .sync({alter:true})
+  .sync()
   .then(() => {
     console.log(" table created successfully!");
   })
